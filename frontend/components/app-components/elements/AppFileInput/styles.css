@@ -1,0 +1,137 @@
+.input-type-file__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: fit-content;
+}
+
+.input-type-file input {
+  display: none;
+}
+
+.input-type-file__button {
+  display: flex;
+  align-items: center;
+}
+
+.input-type-file__button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(48px, 3vw);
+  height: min(48px, 3vw);
+  margin-right: 12px;
+  border: 1px solid;
+  border-radius: 50%;
+  transition: border-color 0.4s;
+}
+
+.light .input-type-file__button-icon {
+  border-color: var(--black);
+}
+
+.dark .input-type-file__button-icon {
+  border-color: var(--white);
+}
+
+.input-type-file__button-icon svg {
+  display: block;
+  width: min(14px, 0.875vw);
+  height: auto;
+}
+
+.input-type-file__button-icon path {
+  transition: stroke 0.4s;
+}
+
+.input-type-file__button-icon .fill {
+  transition: fill 0.4s;
+}
+
+.light .input-type-file__button-icon path {
+  stroke: var(--black);
+}
+
+.light .input-type-file__button-icon .fill {
+  fill: var(--black);
+}
+
+.dark .input-type-file__button-icon path {
+  stroke: var(--white);
+}
+
+.dark .input-type-file__button-icon .fill {
+  fill: var(--white);
+}
+
+.input-type-file__file {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  word-break: break-word;
+  transition: color 0.4s;
+}
+
+.input-type-file__file img {
+  position: relative;
+  top: 1px;
+  display: block;
+  width: min(12px, 0.75vw);
+  margin-right: 12px;
+}
+.input-type-file__file .file-name {
+  transition: 0s;
+}
+
+.input-type-file .input__error-text {
+  margin-top: min(16px, 1vw);
+}
+
+/* Hovers */
+
+@media screen and (hover: hover) {
+  .input-type-file__button:hover .input-type-file__button-icon {
+    border-color: #fd1c30;
+  }
+
+  .input-type-file__button:hover svg path {
+    stroke: #fd1c30;
+  }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  .input-type-file__file {
+    max-width: auto;
+    margin-top: 16px;
+  }
+
+  .input-type-file__button-icon {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .input-type-file__button-icon svg {
+    min-width: 15px;
+    min-height: 17px;
+  }
+
+  .input-type-file__file img {
+    min-width: 12px;
+    min-height: 12px;
+  }
+
+  .input__error-text {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+  .input-type-file__container {
+    display: block;
+  }
+}

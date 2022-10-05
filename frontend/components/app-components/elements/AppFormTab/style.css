@@ -1,0 +1,180 @@
+.from-tabs {
+  width: 100%;
+  margin: min(48px, 3vw) 0 min(24px, 1.5vw) 0;
+}
+.from-tabs .input-box input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  user-select: none;
+}
+
+.from-tabs .tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.from-tabs .tab-nav .tab {
+  width: 33.3%;
+  margin: 0;
+  padding: 0;
+}
+
+.from-tabs .tab-nav .tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  user-select: none;
+}
+
+.from-tabs .tab-nav .tab input ~ label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 13px 0;
+  user-select: none;
+
+  transition: var(--default-transition) ease;
+}
+
+.dark .from-tabs .tab-nav .tab input ~ label {
+  color: var(--white);
+  background: var(--black);
+  border: 1px solid var(--grey-1);
+}
+
+.light .from-tabs .tab-nav .tab input ~ label {
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--grey-3);
+}
+
+.dark .from-tabs .tab-nav .tab input:checked ~ label {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--white);
+}
+
+.light .from-tabs .tab-nav .tab input:checked ~ label {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.from-tabs .tab-nav .tab:nth-child(4) input ~ label,
+.from-tabs .tab-nav .tab:nth-child(5) input ~ label {
+  border-top: 1px solid transparent;
+}
+
+.from-tabs .tab-nav .tab:nth-child(2) input ~ label,
+.from-tabs .tab-nav .tab:nth-child(3) input ~ label,
+.from-tabs .tab-nav .tab:nth-child(5) input ~ label {
+  border-left: 1px solid transparent;
+}
+
+.-on-page.from-tabs {
+  margin-top: 0;
+  margin-bottom: -96px;
+}
+
+.-on-page .tab-nav .tab {
+  width: fit-content;
+}
+
+.-on-page .tab-nav .tab input ~ label {
+  padding: 10px 16px;
+}
+
+.dark .-on-page .tab-nav .tab input ~ label {
+  color: var(--white);
+  background: var(--black);
+  border: 1px solid var(--grey-1);
+  border-right: 1px solid transparent;
+}
+
+.light .-on-page .tab-nav .tab input ~ label {
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--grey-3);
+  border-right: 1px solid transparent;
+}
+
+.dark .-on-page .tab-nav .tab:last-child input ~ label {
+  border-right: 1px solid var(--grey-1);
+}
+
+.light .-on-page .tab-nav .tab:last-child input ~ label {
+  border-right: 1px solid var(--grey-3);
+}
+
+/*Hovers*/
+
+@media screen and (hover: hover) {
+  .light .from-tabs .tab-nav .tab input:hover ~ label {
+    border: 1px solid var(--black);
+  }
+
+  .dark .from-tabs .tab-nav .tab input:hover ~ label {
+    border: 1px solid var(--white);
+  }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1200px) {
+  .-on-page.from-tabs {
+    margin-bottom: -50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .from-tabs {
+    margin: 32px 0 17px 0;
+  }
+
+  .from-tabs .tab-nav .tab input ~ label {
+    padding: 16px 0;
+  }
+
+  .-on-page.from-tabs {
+    margin-top: 0;
+    margin-bottom: -50px;
+  }
+
+  .-on-page .tab-nav .tab {
+    width: fit-content;
+  }
+
+  .-on-page .tab-nav .tab input ~ label {
+    padding: 10px 16px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+  .from-tabs .tab-nav .tab:nth-child(4),
+  .from-tabs .tab-nav .tab:nth-child(5) {
+    width: 50%;
+  }
+
+  .from-tabs .tab-nav .tab input ~ label {
+    padding: 14px 0;
+  }
+
+  .-on-page .tab-nav .tab {
+    width: 50%;
+  }
+
+  .dark .-on-page .tab-nav .tab:nth-child(2) input ~ label,
+  .dark .-on-page .tab-nav .tab:nth-child(4) input ~ label,
+  .dark .-on-page .tab-nav .tab:nth-child(6) input ~ label,
+  .dark .-on-page .tab-nav .tab:last-child input ~ label {
+    border-right: 1px solid var(--grey-1);
+  }
+}

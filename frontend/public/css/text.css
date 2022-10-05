@@ -1,0 +1,199 @@
+body,
+input,
+textarea,
+button {
+  font-family: "Manrope", serif;
+}
+
+.title,
+.text {
+  transition: color var(--default-transition);
+}
+
+/* Title */
+
+.title-1 {
+  font-weight: 500;
+  font-size: min(110px, 6.875vw);
+  letter-spacing: min(-3.5px, -0.2187vw);
+}
+
+.title-2 {
+  font-weight: 500;
+  font-size: min(60px, 3.75vw);
+  line-height: min(64px, 4vw);
+  letter-spacing: min(-1px, -0.0625vw);
+}
+
+.title-3 {
+  font-weight: 500;
+  font-size: min(32px, 2vw);
+  line-height: min(44px, 2.75vw);
+  letter-spacing: min(-0.4px, -0.025vw);
+}
+
+/* Text */
+
+.text-1,
+.text-1 * {
+  font-weight: 400;
+  font-size: min(26px, 1.625vw);
+  line-height: min(40px, 2.5vw);
+}
+
+.text-2,
+.text-2 * {
+  font-weight: 400;
+  font-size: min(20px, 1.25vw);
+  line-height: min(40px, 2.5vw);
+}
+
+.text-3,
+.text-3 * {
+  font-weight: 500;
+  font-size: min(16px, 1vw);
+  line-height: min(26px, 1.625vw);
+}
+
+.text-4,
+.text-4 * {
+  font-weight: 500;
+  font-size: min(14px, 0.875vw);
+  line-height: min(20px, 1.25vw);
+}
+
+.text-caption,
+.text-caption * {
+  font-weight: 700;
+  font-size: min(13px, 0.8125vw);
+  line-height: min(20px, 1.25vw);
+  letter-spacing: min(2px, 0.125vw);
+
+  text-transform: uppercase;
+}
+
+.light .-gray-text {
+  color: var(--grey-1);
+}
+
+.dark .-gray-text {
+  color: #6f6c6c;
+}
+
+/* Links */
+
+.default-link,
+.default-links a {
+  transition: color var(--default-transition);
+}
+
+.light .default-link,
+.light .default-links a {
+  color: var(--black);
+}
+
+.dark .default-link,
+.dark .default-links a {
+  color: #fff;
+}
+
+/* Hover */
+
+@media screen and (hover: hover) {
+  .default-link:hover,
+  .default-links a:hover {
+    color: var(--red);
+  }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  .tablet-title-1,
+  .tablet-title-1 * {
+    font-size: 68px;
+    line-height: 68px;
+    letter-spacing: -2px;
+  }
+
+  .tablet-title-2,
+  .tablet-title-2 * {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .tablet-title-3,
+  .tablet-title-3 * {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  .tablet-text-1,
+  .tablet-text-1 * {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .tablet-text-2,
+  .tablet-text-2 * {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .tablet-text-3,
+  .tablet-text-3 * {
+    font-size: 16px;
+    line-height: 24px;
+
+    letter-spacing: 0.2px;
+  }
+
+  .tablet-text-4,
+  .tablet-text-4 * {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .text-caption,
+  .text-caption * {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 760px) {
+  .mob-title-1,
+  .mob-title-1 * {
+    font-size: 58px;
+    line-height: 62px;
+    letter-spacing: -1.8px;
+  }
+
+  .mob-title-2,
+  .mob-title-2 * {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+  }
+
+  .mob-title-3,
+  .mob-title-3 * {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  .mob-text-3 .mob-text-3 * {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+}

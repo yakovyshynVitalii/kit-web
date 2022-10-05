@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.3"
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.7.4",
+    "gsap": "^3.10.4",
+    "vee-validate": "^4.5.11",
+    "vue-i18n": "9",
+    "yup": "^0.32.11"
+  }
+}

@@ -1,0 +1,56 @@
+* {
+  cursor: none;
+}
+
+/* Cursor */
+
+.cursor {
+  position: fixed;
+  z-index: 9999;
+
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+  border-radius: 100%;
+  border: 1px solid var(--red);
+  background-color: var(--red);
+
+  transform: scale(1);
+  transition: 0.4s transform ease, background 0.4s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Cursor status */
+
+.cursor.-is-hidden {
+  opacity: 1;
+}
+
+.cursor.-disable {
+  transform: scale(0.2);
+}
+
+.cursor.-active {
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+.cursor.-cursor-black {
+  background: var(--black);
+}
+
+.cursor {
+  display: none;
+}
+
+@media screen and (hover: hover) {
+  .cursor {
+    display: none;
+  }
+
+  .cursor.-is-hidden {
+    display: block;
+  }
+}

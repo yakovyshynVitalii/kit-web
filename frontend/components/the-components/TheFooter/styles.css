@@ -1,0 +1,146 @@
+.footer {
+  padding-bottom: 0 !important;
+}
+
+.footer .container {
+  position: relative;
+}
+
+.footer .block__border-title {
+  margin-bottom: min(100px, 6.25vw);
+}
+
+.footer__title {
+  position: relative;
+  display: inline-flex;
+}
+
+.footer__title::after {
+  content: attr(data-after);
+  position: absolute;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(56px, 3.5vw);
+  height: min(56px, 3.5vw);
+  margin: min(-27px, -1.6875vw) 0 0 min(2px, 0.125vw);
+  border-radius: 50%;
+  background-color: #161616;
+  font-size: min(16px, 1vw);
+  font-weight: 400;
+  color: var(--white);
+  line-height: min(26px, 1.625vw);
+  letter-spacing: min(0.2px, 0.0125vw);
+}
+
+.footer__content {
+  position: relative;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: min(88px, 5.5vw);
+}
+
+.footer__contacts-item:last-child {
+  width: calc(50% + min(20px, 1.25vw));
+}
+
+.footer__contacts-item {
+  margin-bottom: 16px;
+}
+
+.footer__contacts-item a {
+  display: inline-block;
+  margin-top: min(16px, 1vw);
+  font-weight: 500;
+}
+
+.footer .magnetic-wrapper {
+  position: absolute;
+  right: 80px;
+  bottom: 49px;
+}
+
+.footer__bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: min(110px, 6.875vw) 0 min(32px, 2vw) 0;
+  text-transform: uppercase;
+}
+
+.footer .red-circle-button {
+  right: 4.947vw;
+  bottom: 3.03vw;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  .footer .block__border-title {
+    margin-bottom: 60px;
+  }
+
+  .footer__title::after {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .footer__contacts {
+    display: block;
+    margin: 0;
+  }
+
+  .footer__contacts-item {
+    margin-top: 48px;
+  }
+
+  .footer__contacts-item:last-child {
+    width: auto;
+  }
+
+  .footer__contacts-item a {
+    margin-top: 11px;
+  }
+
+  .footer .red-circle-button {
+    top: 85px;
+    right: 56px;
+    bottom: auto;
+  }
+
+  .footer__bottom-info {
+    margin-top: 84px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 760px) {
+  .footer .block__border-title {
+    margin-bottom: 68px;
+  }
+
+  .circle-container {
+    width: fit-content;
+    margin: 40px 0 0 auto;
+  }
+
+  .footer .magnetic-wrapper {
+    position: static;
+    top: auto;
+    right: auto;
+  }
+
+  .footer__bottom-info {
+    flex-direction: row-reverse;
+    margin-top: 52px;
+  }
+}

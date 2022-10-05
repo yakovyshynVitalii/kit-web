@@ -1,0 +1,79 @@
+/* Cyrillic */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/manrope-cyrillic.woff2) format("woff2");
+}
+
+/* Latin */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/manrope-latin.woff2) format("woff2");
+}
+
+/* Cyrillic */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/manrope-cyrillic.woff2) format("woff2");
+}
+
+/* Latin */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/manrope-latin.woff2) format("woff2");
+}
+
+/* Cyrillic */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/manrope-cyrillic.woff2) format("woff2");
+}
+
+/* Latin */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/manrope-latin.woff2) format("woff2");
+}
+
+/* Cyrillic */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/manrope-cyrillic.woff2) format("woff2");
+}
+
+/* Latin */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/manrope-latin.woff2) format("woff2");
+}

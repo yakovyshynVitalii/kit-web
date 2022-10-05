@@ -1,0 +1,61 @@
+.default-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: min(80px, 5vw);
+  border: none;
+  background-color: var(--red);
+  font-size: min(16px, 1vw);
+  font-weight: 600;
+  line-height: min(20px, 1.25vw);
+  letter-spacing: min(-0.3px, -0.01875vw);
+  color: var(--white);
+  user-select: none;
+  transition: background-color var(--default-transition),
+    color var(--default-transition);
+}
+
+.default-button .loader {
+  transform: scale(0.4);
+  margin-left: -30px;
+}
+
+/* Hovers */
+
+@media screen and (hover: hover) {
+  .light .default-button:hover {
+    background-color: var(--black);
+  }
+
+  .dark .default-button:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
+
+/* Pc */
+
+@media screen and (max-width: 1500px) {
+  .default-button .loader {
+    transform: scale(0.35);
+    margin-left: -35px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .default-button .loader {
+    transform: scale(0.3);
+    margin-left: -40px;
+  }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  .default-button {
+    height: 68px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

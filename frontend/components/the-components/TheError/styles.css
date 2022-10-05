@@ -1,0 +1,76 @@
+/* Pc */
+
+.error-page {
+  padding: min(155px, 9.6875vw) 0 min(135px, 8.4375vw) 0;
+}
+
+.error-page__code {
+  font-size: min(200px, 12.5vw);
+  font-weight: 500;
+  line-height: min(200px, 12.5vw);
+  letter-spacing: min(-8px, 0.5vw);
+
+  color: #fd1c30;
+}
+
+.error-page__title {
+  margin-top: min(24px, 1.5vw);
+}
+
+.error-page__description {
+  margin-top: min(16px, 1vw);
+  font-size: min(16px, 1vw);
+  line-height: min(26px, 1.625vw);
+  letter-spacing: min(0.2px, 0.0125vw);
+}
+
+.error-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.error-page .circle-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.error-page .magnetic-wrapper,
+.error-page .red-circle-button {
+  margin: min(24px, 1.5vw) auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .error-page {
+    padding: 160px 0 90px 0;
+  }
+
+  .error-page__code {
+    font-size: 140px;
+    line-height: 140px;
+  }
+
+  .error-page__title {
+    margin-top: 24px;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+  }
+
+  .error-page__description {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .error-page .red-circle-button {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .error-page .-pc {
+    display: none;
+  }
+}

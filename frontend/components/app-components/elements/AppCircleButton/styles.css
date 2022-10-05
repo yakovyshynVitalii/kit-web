@@ -1,0 +1,128 @@
+.magnetic-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+.red-circle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: min(200px, 12.5vw);
+  height: min(200px, 12.5vw);
+
+  padding: 0 15px;
+  border-radius: 50%;
+  background-color: var(--red);
+
+  font-size: min(16px, 1vw);
+  line-height: min(20px, 1.25vw);
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+
+  user-select: none;
+  transition: border-color 0.4s, background-color 0.4s, color 0.4s;
+}
+
+.dark .red-circle-button.-no-bg {
+  border: solid 1px var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.light .red-circle-button.-no-bg {
+  border: solid 1px var(--black);
+  background-color: transparent;
+  color: var(--black);
+}
+
+.light .red-circle-button.-transparent {
+  border: solid 1px var(--black);
+  background-color: transparent;
+  color: var(--black);
+}
+
+.dark .red-circle-button.-transparent {
+  border: solid 1px var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.red-circle-button.-no-bg.-transparent {
+  border: solid 1px var(--red);
+  background-color: transparent;
+  color: var(--red);
+}
+
+.red-circle-button.-disabled {
+  background: var(--grey-2) !important;
+  border: 1px solid var(--grey-2) !important;
+  color: white !important;
+  user-select: none !important;
+  pointer-events: none !important;
+}
+
+.red-circle-button.-no-bg.-disabled {
+  border: 1px solid var(--grey-2) !important;
+  color: white !important;
+  user-select: none !important;
+  pointer-events: none !important;
+}
+
+.magnetic-size {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+
+  z-index: 1;
+  border-radius: 50%;
+}
+
+/* Hovers */
+
+@media screen and (hover: hover) {
+  .light .magnetic-wrapper:hover .red-circle-button {
+    background-color: var(--black);
+  }
+
+  .light .magnetic-wrapper:hover .red-circle-button.-transparent {
+    color: #fff;
+  }
+
+  .dark .magnetic-wrapper:hover .red-circle-button {
+    background-color: #fff;
+    color: var(--black);
+  }
+  .magnetic-wrapper:hover .red-circle-button.-no-bg {
+    border: solid 1px var(--red);
+    background-color: transparent;
+    color: var(--red);
+  }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  .red-circle-button {
+    width: 160px;
+    height: 160px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .magnetic-size {
+    display: none;
+  }
+  .magnetic-wrapper {
+    border-radius: 50%;
+    border: 1px solid transparent;
+  }
+}

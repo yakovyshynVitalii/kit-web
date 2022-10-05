@@ -1,0 +1,209 @@
+/* Pc */
+
+.input input:-webkit-autofill {
+  transition: 0.4s;
+}
+
+.input input:-webkit-autofill,
+.input input:-webkit-autofill:hover,
+.input input:-webkit-autofill:focus,
+.input input:-webkit-autofill:first-line,
+.input textarea:-webkit-autofill,
+.input textarea:-webkit-autofill:hover,
+.input textarea:-webkit-autofill:focus,
+.input textarea:-webkit-autofill:first-line,
+.input select:-webkit-autofill,
+.input select:-webkit-autofill:hover,
+.input select:-webkit-autofill:focus,
+.input select:-webkit-autofill:first-line,
+.light .input input:-webkit-autofill,
+.light .input input:-webkit-autofill:hover,
+.light .input input:-webkit-autofill:focus,
+.light .input input:-webkit-autofill:first-line,
+.light .input textarea:-webkit-autofill,
+.light .input textarea:-webkit-autofill:hover,
+.light .input textarea:-webkit-autofill:focus,
+.light .input textarea:-webkit-autofill:first-line,
+.light .input select:-webkit-autofill,
+.light .input select:-webkit-autofill:hover,
+.light .input select:-webkit-autofill:focus,
+.light .input select:-webkit-autofill:first-line {
+  box-shadow: 0 0 0px 1000px var(--white) inset;
+  font-family: "Manrope";
+  color: var(--black);
+  background: transparent;
+  -webkit-text-fill-color: var(--black);
+}
+
+.dark .input input:-webkit-autofill,
+.dark .input input:-webkit-autofill:hover,
+.dark .input input:-webkit-autofill:focus,
+.dark .input input:-webkit-autofill:first-line,
+.dark .input textarea:-webkit-autofill,
+.dark .input textarea:-webkit-autofill:hover,
+.dark .input textarea:-webkit-autofill:focus,
+.dark .input textarea:-webkit-autofill:first-line,
+.dark .input select:-webkit-autofill,
+.dark .input select:-webkit-autofill:hover,
+.dark .input select:-webkit-autofill:focus,
+.dark .input select:-webkit-autofill:first-line {
+  box-shadow: 0 0 0px 1000px var(--black) inset;
+  font-family: "Manrope";
+  color: var(--white);
+  background: transparent;
+  -webkit-text-fill-color: var(--white);
+}
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.input + .input {
+  margin-top: min(25px, 1.5625vw);
+}
+
+.input-type-text.-important img {
+  content: "";
+  position: absolute;
+  top: min(8px, 0.5vw);
+  right: 0;
+  display: block;
+  width: min(12px, 0.75vw);
+  height: min(12px, 0.75vw);
+  animation: important-star-rotate 3s linear infinite;
+}
+
+.input__error-text {
+  margin-top: 4px;
+  color: var(--red);
+}
+
+@keyframes important-star-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input.-error input,
+.input.-error textarea {
+  border-color: var(--red) !important;
+}
+
+.input-type-text textarea {
+  padding: min(8px, 0.5vw) 0;
+}
+
+.input-type-text input,
+.input-type-text textarea {
+  display: block;
+  width: 100%;
+  height: min(60px, 3.75vw);
+  border: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
+  font-size: min(32px, 2vw);
+  line-height: min(44px, 2.75vw);
+  letter-spacing: min(-0.4px, -0.025vw);
+  overflow: hidden;
+  transition: border-color 0.4s, color 0.4s;
+}
+
+.input-type-text textarea {
+  min-height: min(60px, 3.75vw);
+}
+
+.light .input-type-text input,
+.light .input-type-text textarea {
+  color: var(--black);
+  border-color: var(--grey-2);
+}
+
+.light .input-type-text input:focus,
+.light .input-type-text textarea:focus {
+  border-color: var(--black);
+}
+
+.dark .input-type-text input,
+.dark .input-type-text textarea {
+  color: var(--white);
+  border-color: var(--grey-1);
+}
+
+.dark .input-type-text input:focus,
+.dark .input-type-text textarea:focus {
+  border-color: var(--white);
+}
+
+.input-type-text input::placeholder,
+.input-type-text textarea::placeholder {
+  transition: color 0.4s;
+}
+
+.light .input-type-text input::placeholder,
+.light .input-type-text textarea::placeholder {
+  color: var(--grey-3);
+}
+
+.dark .input-type-text input::placeholder,
+.dark .input-type-text textarea::placeholder {
+  color: var(--grey-1);
+}
+
+/* Hovers */
+
+@media screen and (hover: hover) {
+  .light .input-type-text input:hover,
+  .light .input-type-text textarea:hover {
+    border-color: var(--black);
+  }
+
+  .dark .input-type-text input:hover,
+  .dark .input-type-text textarea:hover {
+    border-color: var(--white);
+  }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  .input + .input {
+    margin-top: 18px;
+  }
+
+  .input input:-webkit-autofill,
+  .input input:-webkit-autofill:hover,
+  .input input:-webkit-autofill:focus,
+  .input input:-webkit-autofill:first-line,
+  .input textarea:-webkit-autofill,
+  .input textarea:-webkit-autofill:hover,
+  .input textarea:-webkit-autofill:focus,
+  .input textarea:-webkit-autofill:first-line,
+  .input select:-webkit-autofill,
+  .input select:-webkit-autofill:hover,
+  .input select:-webkit-autofill:focus,
+  .input select:-webkit-autofill:first-line,
+  .input-type-text input,
+  .input-type-text textarea {
+    height: 45px;
+    padding-top: 7px;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  .input-type-text textarea {
+    min-height: 43px;
+  }
+
+  .input-type-text.-important img {
+    top: 5px;
+
+    min-width: 12px;
+    min-height: 12px;
+  }
+}

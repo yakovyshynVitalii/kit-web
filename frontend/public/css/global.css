@@ -1,0 +1,168 @@
+:root {
+  --red: #fd1c30;
+  --white: #fff;
+  --grey: #6f6c6c;
+
+  --default-transition: 0.4s;
+
+  --tablet: 1000px;
+  --mobile: 760px;
+}
+
+/* Global style dark theme */
+
+:root .dark {
+  --black: #111111;
+
+  --grey-1: #353333;
+  --grey-2: #6e6c6c;
+  --grey-3: #ccc7c7;
+}
+
+/* Global style light theme */
+
+:root .light {
+  --black: #161616;
+
+  --grey-1: #9c9da1;
+  --grey-2: #b7b7b7;
+  --grey-3: #e4e4e4;
+}
+
+/* Global style */
+
+html.-scroll-lock,
+html.-scroll-lock body {
+  height: calc(var(--window-inner-height) - 1px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  overflow-y: scroll;
+  padding: 0 min(40px, 2.5vw) 0 min(300px, 18.75vw);
+  transition: background-color var(--default-transition);
+}
+
+body.-scroll-lock {
+  position: relative;
+}
+
+.body-hidden {
+  overflow: hidden;
+}
+
+/* Body color style */
+
+body.light {
+  background-color: var(--white);
+}
+
+body.dark {
+  background-color: var(--black);
+}
+
+body.light,
+body.light input {
+  color: var(--black);
+}
+
+body.dark {
+  color: var(--white);
+}
+
+sup {
+  color: var(--red);
+}
+
+/* Theme styles */
+
+.light ::-moz-selection {
+  color: var(--white);
+  background: var(--black);
+}
+
+.light ::selection {
+  color: var(--white);
+  background: var(--black);
+}
+
+.dark ::-moz-selection {
+  color: var(--black);
+  background: var(--white);
+}
+
+.dark ::selection {
+  color: var(--black);
+  background: var(--white);
+}
+
+.block {
+  padding: min(134px, 8.375vw) 0;
+}
+
+.block__border-title {
+  margin-bottom: min(74px, 4.625vw);
+  padding-top: min(16px, 1vw);
+  border-top: 1px solid;
+  color: var(--grey-2);
+  transition: color var(--default-transition),
+    border-color var(--default-transition);
+}
+
+.light .block__border-title {
+  border-color: var(--grey-3);
+  color: var(--grey-2);
+}
+
+.dark .block__border-title {
+  border-color: var(--grey);
+  color: var(--grey);
+}
+
+.block__title {
+  margin-bottom: min(88px, 5.5vw);
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 0;
+  }
+
+  .-br-none-from-tablet br {
+    display: none !important;
+  }
+
+  .container {
+    margin: 0 40px;
+  }
+
+  .block {
+    padding: 90px 0;
+  }
+
+  .block__border-title {
+    padding-top: 12px;
+    margin-bottom: 50px;
+  }
+
+  .block__title {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 760px) {
+  .-br-none-from-mobile br {
+    display: none !important;
+  }
+
+  .container {
+    width: auto;
+    margin: 0;
+    padding: 0 20px;
+  }
+}

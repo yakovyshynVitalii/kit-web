@@ -1,0 +1,63 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: white;
+  transition: 0.4s;
+  overflow-y: scroll;
+}
+
+.preloader-hidden {
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+}
+
+@keyframes preloaderAnim {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.preloader-block {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
+}
+
+.preloader-block.-black {
+  background: black;
+}
+
+.preloader-block.-white {
+  background: white;
+}
+
+.preloader-block.-black {
+  background: black;
+  z-index: 10002;
+  animation: preloaderAnim 3s ease;
+  animation-fill-mode: forwards;
+}
